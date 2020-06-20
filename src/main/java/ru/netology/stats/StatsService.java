@@ -13,12 +13,7 @@ public class StatsService {
 
   // Средняя сумма продаж в месяц
   public long countAverageSum(long[] salesOnMonths) {
-    long sum = 0;
-    long lenght = salesOnMonths.length;
-    for (long month : salesOnMonths) {
-      sum += month;
-    }
-    return sum / lenght;
+    return countSumOfSales(salesOnMonths) / salesOnMonths.length;
   }
 
   // Номер месяца, в котором был пик продаж
